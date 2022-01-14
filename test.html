@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="app"></div>
+	<script src="./polarclockportfolio.min.js"></script>
+    <script>
+        var PCP = PolarClockPortfolio;
+
+        var hw = [
+            {
+                text: '子',
+                url: './hw01'
+            },
+            {
+                text: '丑',
+                url: './hw02'
+            },
+            {
+                text: '寅',
+                url: './hw03'
+            },
+            {
+                text: '卯',
+                url: './hw04'
+            },
+            {
+                text: '辰',
+                url: './hw05'
+            },
+            {
+                text: '巳',
+                url: './hw06'
+            },
+            {
+                text: '午',
+                url: './hw07'
+            },
+            {
+                text: '未',
+                url: './hw08'
+            },
+            {
+                text: '申',
+                url: './hw09'
+            },
+            {
+                text: '酉',
+                url: './hw10'
+            },
+            {
+                text: '戌',
+                url: './hw11'
+            },
+            {
+                text: '亥',
+                url: './hw12'
+            },
+            {
+                text: '甲',
+                url: './hw13'
+            }
+        ];
+
+        var config = {
+            page: {
+                loadingBG: '#222',
+                mainBG: '#222',
+                prevBG: 'rgba(255, 255, 255, 0.198)'
+            },
+            polarClock: {
+                size: innerHeight - 10,
+                fieldTrackColor: '#3d2033',
+                hwTextColor: '#a2eafa',
+                hwCircleColor: '#374669',
+                tickTextColor: '#90b089',
+                nameText: '仲皓瑋',
+                nameCircleColor: '#857499',
+                nameTransitionLoop: true
+            },
+            loading: {
+                githubAccount: '',
+                githubRepo: ''
+            }
+        };
+
+        PCP.config = config;
+        PCP.hw = hw;
+        PCP.mount('#app');
+
+        PCP.installLibrary(() => {
+            PCP.loadFont('./cwTeXKai.ttf', () => {
+                PCP.render();
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
