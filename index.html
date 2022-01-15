@@ -93,12 +93,12 @@
 			var PCP = PolarClockPortfolio;
 			PCP.config = config;
 			PCP.hw = hw;
+			PCP.fontSource = './cwTeXKai.ttf';
+			
 			PCP.mount('#app');
 
 			PCP.installLibrary(function(){
-				PCP.loadFont('./cwTeXKai.ttf',function(){
-					PCP.render();
-				});
+				PCP.render();
 			});
 		};
 
