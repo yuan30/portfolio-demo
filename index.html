@@ -8,7 +8,7 @@
     <div id="app"></div>
 	<script src="./dist/polarclockportfolio.min.js"></script>
     <script>
-        var PCP = PolarClockPortfolio;
+        
 
         var hw = [
             {
@@ -69,7 +69,8 @@
             page: {
                 loadingBG: '#222',
                 mainBG: '#222',
-                prevBG: 'rgba(255, 255, 255, 0.198)'
+                prevBG: 'rgba(255, 255, 255, 0.198)',
+				smTitle: 'Type Design and Character Encoding'
             },
             polarClock: {
                 size: innerHeight - 10,
@@ -77,25 +78,29 @@
                 hwTextColor: '#a2eafa',
                 hwCircleColor: '#374669',
                 tickTextColor: '#90b089',
-                nameText: '仲皓瑋',
+                nameText: '展示用',
                 nameCircleColor: '#857499',
-                nameTransitionLoop: true
+                nameTransitionLoop: true,
+				hwFontFamily: '\'cwTeXFangSong\', serif;'
             },
             loading: {
                 githubAccount: 't109598105',
                 githubRepo: 'portfolio-demo'
             }
         };
+		
+		window.onload = function(){
+			var PCP = PolarClockPortfolio;
+			PCP.config = config;
+			PCP.hw = hw;
+			PCP.mount('#app');
 
-        PCP.config = config;
-        PCP.hw = hw;
-        PCP.mount('#app');
-
-        PCP.installLibrary(() => {
-            PCP.loadFont('./cwTeXKai.ttf', () => {
-                PCP.render();
-            });
-        });
+			PCP.installLibrary(function(){
+				PCP.loadFont('./cwTeXKai.ttf',function(){
+					PCP.render();
+				});
+			});
+		};
 
     </script>
 
