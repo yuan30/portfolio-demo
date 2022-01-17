@@ -6,10 +6,9 @@
 
 <body>
     <div id="app"></div>
-	<script src="./dist/polarclockportfolio.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/t109598105/portfolio-demo@latest/dist/polarclockportfolio.min.js"></script>
     <script>
         
-
         var hw = [
             {
                 text: '子',
@@ -81,7 +80,6 @@
                 nameText: '展示用',
                 nameCircleColor: '#857499',
                 nameTransitionLoop: true,
-				//hwFontFamily: '\'cwTeXFangSong\', serif;',
                 hwFontFamily: 'DFKai-sb',
                 hwFontPosition: {
                     dx: '-23px',
@@ -98,7 +96,7 @@
 			var PCP = PolarClockPortfolio;
 			PCP.config = config;
 			PCP.hw = hw;
-			PCP.fontSource = './cwTeXKai.ttf';
+			PCP.fontSource = 'https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.ttf';
 
             PCP.onLoadLoadingPage = function(){
                 console.log('Loading Success');
@@ -119,5 +117,4 @@
     </script>
 
 </body>
-
 </html>
