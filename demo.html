@@ -29,13 +29,29 @@
 				smTitle: 'Type Design and Character Encoding'
             },
             polarClock: {
+				//polar clock 大小(最大是瀏覽器高度)
                 size: innerHeight + 30,
+				//polar clock 時針邊框顏色
                 fieldTrackColor: '#3d2033',
+				//polar clock Tick 圓圈底色
+				fieldTickColor: '#222',
+				//homework 字體顏色
                 hwTextColor: '#a2eafa',
+				//polar clock Tick 字體的顏色
+				fieldTickStroke: 'black',
+				//homework 圓圈底色
                 hwCircleColor: '#374669',
-                tickTextColor: '#90b089',
+				//homework 圓圈邊框顏色
+				hwCircleStroke: 'white',
+				//圓變漢字部分字體顏色
+				nameCircleStroke: 'white',
+				//tick 字體顏色
+                tickTextColor: 'white',	
+				//圓變漢字部分字體顏色 (預設 random)
+				nameTextColor: 'green',
                 nameText: '展示用',
-                nameCircleColor: '#857499',
+				//圓變漢字部分圓形顏色
+                nameCircleColor: 'rgba(106,76,156,0.3)',
                 nameTransitionLoop: true,
                 hwFontFamily: 'DFKai-sb',
                 hwFontPosition: {
@@ -53,7 +69,7 @@
 			var PCP = PolarClockPortfolio;
 			PCP.config = config;
 			PCP.hw = hw;
-			PCP.fontSource = 'https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.ttf';
+			PCP.fontSource = 'https://cdn.jsdelivr.net/gh/t109598105/portfolio-demo@latest/SourceHanSerif-Heavy.ttf';
 
             PCP.onLoadLoadingPage = function(){
                 console.log('Loading Success');
